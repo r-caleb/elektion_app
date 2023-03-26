@@ -30,7 +30,7 @@ export default {
   ],
   menus: [
     {
-      name: "Navigation",
+      name: "Menu",
       items: [
         { name: "Accueil", href: "https://www.creative-tim.com/presentation" },
         {
@@ -38,14 +38,26 @@ export default {
           href: "https://www.creative-tim.com/templates/free",
         },
         {
-          name: "Centre",
+          name: "Parti Politique",
           href: "https://www.creative-tim.com/templates/premium",
         },
-        { name: "Actualités", href: "https://www.creative-tim.com/blog" },
+        { name: "Centres", href: "https://www.creative-tim.com/blog" },
       ],
     },
     {
-      name: "Aide et Soutien",
+      name: "Autre menu",
+      items: [
+        { name: "Actualités", href: "https://www.creative-tim.com/blog" },
+        { name: "Textes Légaux", href: "https://www.creative-tim.com/blog" },
+        { name: "Campagne & vote", href: "https://www.creative-tim.com/blog" },
+        {
+          name: "Calendrier électoral",
+          href: "https://www.creative-tim.com/blog",
+        },
+      ],
+    },
+    {
+      name: "Besoin d'aide",
       items: [
         {
           name: "Contactez-nous",
@@ -63,17 +75,6 @@ export default {
         {
           name: "Politique de confidentialité",
           href: "https://www.creative-tim.com/privacy",
-        },
-      ],
-    },
-    {
-      name: "",
-      items: [
-        { name: "illustrations", href: "https://iradesign.io/" },
-        { name: "bits & snippets", href: "https://www.creative-tim.com/bits" },
-        {
-          name: "affiliate program",
-          href: "https://www.creative-tim.com/affiliates/new",
         },
       ],
     },

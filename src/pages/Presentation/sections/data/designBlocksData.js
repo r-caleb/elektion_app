@@ -34,12 +34,12 @@ export default [
       {
         image: parti,
         name: "Espace des partis politiques",
-        route: "/sections/page-sections/page-headers",
+        route: "/pages/parti_politique",
       },
       {
         image: candidat,
         name: "Espace candidat",
-        route: "/sections/page-sections/features",
+        route: "/pages/candidat",
       },
     ],
   },
@@ -51,7 +51,7 @@ export default [
       {
         image: centre,
         name: "Centres d'inscription et de vote",
-        route: "/sections/navigation/navbars",
+        route: "/pages/center",
       },
     ],
   },
@@ -63,22 +63,22 @@ export default [
       {
         image: news,
         name: "Actualités",
-        route: "Actualités",
+        route: "/pages/news",
       },
       {
         image: juridique,
         name: "Les textes légaux",
-        route: "/sections/navigation/navbars",
+        route: "/pages/legaltext",
       },
       {
         image: campagne,
         name: "Dispositions sur la campagne et le vote",
-        route: "/sections/navigation/navbars",
+        route: "/pages/campaign",
       },
       {
         image: calendrier,
         name: "Calendrier électoral",
-        route: "/sections/input-areas/forms",
+        route: "/pages/electcalendar",
       },
     ],
   },
@@ -89,7 +89,7 @@ export default [
       {
         image: map,
         name: "Avec la cartographie localiser le centre le plus proche de vous",
-        route: "/sections/attention-catchers/alerts",
+        route: "/pages/map",
       },
       {
         image: fact,
