@@ -16,7 +16,7 @@ export default {
   brand: {
     name: "ELEKTION APP",
     image: logoCT,
-    route: "/",
+    route: "/presentation",
   },
   socials: [
     {
@@ -32,27 +32,27 @@ export default {
     {
       name: "Menu",
       items: [
-        { name: "Accueil", href: "https://www.creative-tim.com/presentation" },
+        { name: "Accueil", href: "/presentation" },
         {
           name: "Candidat",
-          href: "https://www.creative-tim.com/templates/free",
+          href: "/pages/candidat",
         },
         {
           name: "Parti Politique",
-          href: "https://www.creative-tim.com/templates/premium",
+          href: "/pages/parti_politique",
         },
-        { name: "Centres", href: "https://www.creative-tim.com/blog" },
+        { name: "Centres", href: "/pages/center" },
       ],
     },
     {
       name: "Autre menu",
       items: [
-        { name: "Actualités", href: "https://www.creative-tim.com/blog" },
-        { name: "Textes Légaux", href: "https://www.creative-tim.com/blog" },
-        { name: "Campagne & vote", href: "https://www.creative-tim.com/blog" },
+        { name: "Actualités", href: "/pages/news" },
+        { name: "Textes Légaux", href: "/pages/legaltext" },
+        { name: "Campagne & vote", href: "/pages/campaign" },
         {
           name: "Calendrier électoral",
-          href: "https://www.creative-tim.com/blog",
+          href: "/pages/electcalendar",
         },
       ],
     },

@@ -87,9 +87,8 @@ const Faq = () => {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-          {" "}
           <div>
-            <MKTypography
+            {/*  <MKTypography
               variant="h5"
               color="dark"
               style={{ textAlign: "center" }}
@@ -113,7 +112,24 @@ const Faq = () => {
                   {`"Le dernier cas date de ce jeudi. Un document attribué au ministre en charge des Congolais de l'étranger, Emmanuel Ilunga faisait état de la décision de Kinshasa de n’accorder aux ressortissants français et belges que des "visas humanitaires ou pour soins."       "source: Ceni"`}
                 </Typography>
               </AccordionDetails>
-            </Accordion>
+            </Accordion> */}
+            {faq.map((faq) => (
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>{faq.fakeinfos}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{faq.precisionInfos}</Typography>
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Typography>{faq.dateFake}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
           </div>
         </Card>
         <Footer />

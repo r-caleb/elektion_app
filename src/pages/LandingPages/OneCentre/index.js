@@ -48,7 +48,7 @@ const OneCentre = () => {
   useEffect(() => {
     fetchData();
   }, [input]);
-  const centerProvince = centers.filter(
+  const centerProvince = centers.filter(  
     (center) => center.province === nomProvince
   );
   const provinceCenter = centerProvince.filter((center) =>
