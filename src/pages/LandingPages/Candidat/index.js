@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -14,7 +13,16 @@ import Posts from "pages/LandingPages/Candidat/sections/Posts";
 import Contact from "pages/LandingPages/Candidat/sections/Contact";
 import Footer from "pages/LandingPages/Candidat/sections/Footer";
 import "./candidat.scss";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
+// @mui material components
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+
+// Material Kit 2 React components
+import MKBox from "components/MKBox";
+import MKInput from "components/MKInput";
 // Routes
 import routes from "routes";
 const keywords = [
@@ -79,6 +87,7 @@ const Candidat = () => {
             placeItems: "center",
           }}
         />
+
         <Card
           sx={{
             p: 2,

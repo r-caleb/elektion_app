@@ -148,16 +148,11 @@ const OneCentre = () => {
                   <Row className="data_center">
                     {center.values.map((item) => (
                       <Row className="separate">
-                        <Link
-                          to={`/center/stat/${item.nomCentre},${nomProvince}`}
-                          title="Cliquez pour voir plus de détails sur le centre"
-                        >
-                          <div>
-                            <strong>{item.nomCentre}</strong>
-                          </div>
-                          <div>{item.NbrDesBureaux} bureaux de votes</div>
-                          <div>{item.adresse}</div>
-                        </Link>
+                        <div>
+                          <strong>{item.nomCentre}</strong>
+                        </div>
+                        <div>{item.NbrDesBureaux} bureaux de votes</div>
+                        <div>{item.adresse}</div>
                       </Row>
                     ))}
                   </Row>
