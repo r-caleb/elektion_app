@@ -63,6 +63,7 @@ function Team() {
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
             </MKBox>
+            
           </Grid>
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
