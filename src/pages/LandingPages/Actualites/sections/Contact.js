@@ -6,7 +6,7 @@
 * Product Page: https://www.creative-tim.com/product/material-kit-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+Coded by www.creative-tim.com   
 
  =========================================================
 
@@ -67,10 +67,10 @@ function Contact() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                      Contact Information
+                       Information de Contact
                     </MKTypography>
                     <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                      Fill up the form and our Team will get back to you within 24 hours.
+                      Remplissez le formulaire et notre équipe vous répondra dans les 24 heures.
                     </MKTypography>
                     <MKBox display="flex" p={1}>
                       <MKTypography variant="button" color="white">
@@ -84,7 +84,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        (+40) 772 100 200
+                        (+243) 772 100 200
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -99,7 +99,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        hello@creative-tim.com
+                        contact@elektionapp.cd
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -114,7 +114,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        Dyonisie Wolf Bucharest, RO 010458
+                        Kinshasa Gombe, RO 010458
                       </MKTypography>
                     </MKBox>
                     <MKBox mt={3}>
@@ -124,12 +124,12 @@ function Contact() {
                       <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-twitter" style={{ fontSize: "1.25rem" }} />
                       </MKButton>
-                      <MKButton variant="text" color="white" size="large" iconOnly>
+                      {/* <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-dribbble" style={{ fontSize: "1.25rem" }} />
                       </MKButton>
                       <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-instagram" style={{ fontSize: "1.25rem" }} />
-                      </MKButton>
+                      </MKButton> */}
                     </MKBox>
                   </MKBox>
                 </MKBox>
@@ -138,10 +138,11 @@ function Contact() {
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
                     <MKTypography variant="h2" mb={1}>
-                      Say Hi!
+                      Mbote!
                     </MKTypography>
                     <MKTypography variant="body1" color="text" mb={2}>
-                      We&apos;d like to talk with you.
+                    Avez-vous une information utile a nous partager ? 
+Merci de nous le soumettre, Nous aimerions parler avec vous.
                     </MKTypography>
                   </MKBox>
                   <MKBox pt={0.5} pb={3} px={3}>
@@ -149,8 +150,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="My name is"
-                          placeholder="Full Name"
+                          label="Votre Nom"
+                          placeholder=""
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -158,8 +159,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="I'm looking for"
-                          placeholder="What you love"
+                          label="Votre sujet"
+                          placeholder=""
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -167,8 +168,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Your message"
-                          placeholder="I want to say that..."
+                          label="Votre message"
+                          placeholder=""
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                           multiline
@@ -186,7 +187,7 @@ function Contact() {
                       ml="auto"
                     >
                       <MKButton variant="gradient" color="info">
-                        Send Message
+                        Envoyer Message
                       </MKButton>
                     </Grid>
                   </MKBox>

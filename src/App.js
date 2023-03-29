@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import { useEffect } from "react";
-
+// import OneArticle from "pages/LandingPages/OneArticle";
 // react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
@@ -57,6 +57,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
+        {/* <Route exact path="pages/LandingPages/OneArticle/:id" element={<OnePost />} /> */}
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
     </ThemeProvider>

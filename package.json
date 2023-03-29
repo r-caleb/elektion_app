@@ -65,5 +65,8 @@
   "devDependencies": {
     "dotenv": "^16.0.3",
     "sass": "^1.55.0"
+  },
+  "volta": {
+    "node": "16.19.1"
   }
 }

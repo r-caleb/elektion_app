@@ -1,3 +1,5 @@
+
+
 import React from "react";
 
 // @mui material components
@@ -10,13 +12,16 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import Profile from "pages/LandingPages/Author/sections/Profile";
-import Posts from "pages/LandingPages/Author/sections/Posts";
+// import Profile from "pages/LandingPages/Author/sections/Profile";
+import Posts from "pages/LandingPages/Actualites/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
-import Footer from "pages/LandingPages/Author/sections/Footer";
+// import Footer from "pages/LandingPages/Author/sections/Footer";
+import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Routes
 import routes from "routes";
+import footerRoutes from "footer.routes";
+
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
@@ -56,11 +61,12 @@ const Actualites = () => {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-          <Profile />
+          {/* <Profile /> */}
           <Posts />
         </Card>
         <Contact />
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
+
       </MKBox>
     </>
   );
