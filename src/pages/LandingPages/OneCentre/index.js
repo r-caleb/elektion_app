@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -15,7 +20,7 @@ import Contact from "pages/LandingPages/Candidat/sections/Contact";
 import Footer from "pages/LandingPages/Candidat/sections/Footer";
 // Routes
 import routes from "routes";
-
+import "./centerScreen.scss";
 // Images
 import bgImage from "assets/images/city-profile.jpg";
 import Team from "./sections/Team";
@@ -53,7 +58,7 @@ const OneCentre = () => {
       : true
   );
   const handleSelect = (e) => {
-    setActiveElement(e.target.value);
+    setInput(e.target.value);
   };
   const categoryAll = centerProvince.map((center) => center.circonscription);
   var categories = [...new Set(categoryAll)];
@@ -110,24 +115,31 @@ const OneCentre = () => {
         >
           <Container>
             <Row className="center_title title">
-              <Col>{nomProvince}</Col>
-              <Col>{provinceCenter.length} centres électoraux</Col>
+              <div>{nomProvince}</div>
+              <div>{provinceCenter.length} centres électoraux</div>
             </Row>
             <Row className="center_title title">
-              <Col>Circonscription de </Col>
-              <Col>
-                <Form.Select
-                  aria-label="Default select example"
-                  onChange={handleSelect}
-                >
-                  <option>Selectionner un district</option>
-                  {categories.map((center) => (
-                    <option value={center} key={center}>
-                      {center}
-                    </option>
-                  ))}
-                </Form.Select>
-              </Col>
+              <div>Circonscription de </div>
+              <div>
+                <Box sx={{ minWidth: 200 }}>
+                  <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">
+                      Selectionner un district
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={input}
+                      label="Selectionner un district"
+                      onChange={handleSelect}
+                    >
+                      {categories.map((center) => (
+                        <MenuItem value={center}>{center}</MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </Box>
+              </div>
             </Row>
             {communeCenter?.map((center) => (
               <div className="town__center" key={center.name}>
@@ -135,18 +147,18 @@ const OneCentre = () => {
                   <div className="quarter">{center.name}</div>
                   <Row className="data_center">
                     {center.values.map((item) => (
-                      <Link
-                        to={`/center/stat/${item.nomCentre},${nomProvince}`}
-                        title="Cliquez pour voir plus de détails sur le centre"
-                      >
-                        <Row className="separate">
-                          <Col>
+                      <Row className="separate">
+                        <Link
+                          to={`/center/stat/${item.nomCentre},${nomProvince}`}
+                          title="Cliquez pour voir plus de détails sur le centre"
+                        >
+                          <div>
                             <strong>{item.nomCentre}</strong>
-                          </Col>
-                          <Col>{item.NbrDesBureaux} bureaux de votes</Col>
-                          <Col>{item.adresse}</Col>
-                        </Row>
-                      </Link>
+                          </div>
+                          <div>{item.NbrDesBureaux} bureaux de votes</div>
+                          <div>{item.adresse}</div>
+                        </Link>
+                      </Row>
                     ))}
                   </Row>
                 </div>
