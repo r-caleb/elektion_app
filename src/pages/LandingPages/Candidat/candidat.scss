@@ -1,3 +1,59 @@
+.question {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    span {
+      background-color: #d7f5e7;
+      padding: 5px;
+      font-weight: 500;
+    }
+  }
+
+  form {
+    flex: 0.3;
+    display: flex;
+    padding: 0.1rem !important;
+    margin: 0.5rem 1rem 0rem !important;
+    height: 40px !important;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+
+    input {
+      width: 250px;
+      border: 1px solid #dcdcdc;
+      font-weight: 500;
+      background: #f5f6fa;
+      padding: 0.3rem;
+      color: #6f767e;
+      font-size: 16px;
+      border-radius: 10px 0px 0px 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 0 1rem;
+      color: #f5f6fa;
+      background: #00a2dd;
+      border: none;
+      border-radius: 0px 10px 10px 0px;
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
 .categoriesBar {
   padding: 0.5rem 0;
   font-size: 0.8rem;

@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
+import { AiOutlineSearch } from "react-icons/ai";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -79,7 +80,7 @@ const Centre = () => {
         <Card
           sx={{
             px: 20,
-            py:5,
+            py: 5,
             mx: { xs: 2, lg: 3 },
             mt: -8,
             mb: 4,
@@ -97,9 +98,22 @@ const Centre = () => {
             handleClick={handleClick}
           /> */}
           <Container>
-            <h4>
-              Totals des centres : <span>{totalCentre}</span>
-            </h4>
+            <div className="center_flex">
+              <h4>
+                Totals des centres : <span>{totalCentre}</span>
+              </h4>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Chercher une province"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                />
+                <button type="submit">
+                  <AiOutlineSearch size={22} />
+                </button>
+              </form>
+            </div>
             <Row className="center_title">
               <Col>Province</Col>
             </Row>

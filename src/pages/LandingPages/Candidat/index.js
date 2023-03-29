@@ -19,6 +19,7 @@ import TextField from "@mui/material/TextField";
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import { AiOutlineSearch } from "react-icons/ai";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -35,6 +36,7 @@ const keywords = [
 // Images
 import bgImage from "assets/images/city-profile.jpg";
 import Team from "./sections/Team";
+import { Col, Row } from "react-bootstrap";
 const Candidat = () => {
   const [activeElement, setActiveElement] = useState("Tout");
   const [candidats, setCandidat] = useState([]);
@@ -100,6 +102,23 @@ const Candidat = () => {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
+          <Row className="question">
+            <div></div>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Chercher un candidat"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                />
+                <button type="submit">
+                  <AiOutlineSearch size={22} />
+                </button>
+              </form>
+            </div>
+          </Row>
+          <hr />
           <Team
             keywords={keywords}
             candidates={candidates}

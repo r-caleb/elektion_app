@@ -36,9 +36,7 @@ const OneCentre = () => {
   const province = useParams();
   let nomProvince = province.province;
   const fetchData = () => {
-    fetch(
-      `https://de-vie.com/processus_E_api/api/list_centre?search=${input}&id`
-    )
+    fetch(`https://de-vie.com/processus_E_api/api/list_centre?search=${input}`)
       .then((response) => {
         return response.json();
       })
@@ -46,9 +44,10 @@ const OneCentre = () => {
         setCenter(data.data);
       });
   };
+  console.log(input);
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [input]);
   const centerProvince = centers.filter(
     (center) => center.province === nomProvince
   );
@@ -58,7 +57,7 @@ const OneCentre = () => {
       : true
   );
   const handleSelect = (e) => {
-    setInput(e.target.value);
+    setActiveElement(e.target.value);
   };
   const categoryAll = centerProvince.map((center) => center.circonscription);
   var categories = [...new Set(categoryAll)];
@@ -115,30 +114,35 @@ const OneCentre = () => {
         >
           <Container>
             <Row className="center_title title">
-              <div>{nomProvince}</div>
-              <div>{provinceCenter.length} centres électoraux</div>
+              <div>
+                {nomProvince} :<span> {provinceCenter.length} centres</span>
+              </div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Chercher un centre"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                />
+                <button type="submit">
+                  <AiOutlineSearch size={22} />
+                </button>
+              </form>
             </Row>
             <Row className="center_title title">
               <div>Circonscription de </div>
               <div>
-                <Box sx={{ minWidth: 200 }}>
-                  <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">
-                      Selectionner un district
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={input}
-                      label="Selectionner un district"
-                      onChange={handleSelect}
-                    >
-                      {categories.map((center) => (
-                        <MenuItem value={center}>{center}</MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                </Box>
+                <Form.Select
+                  aria-label="Default select example"
+                  onChange={handleSelect}
+                >
+                  <option>Selectionner un district</option>
+                  {categories.map((center) => (
+                    <option value={center} key={center}>
+                      {center}
+                    </option>
+                  ))}
+                </Form.Select>
               </div>
             </Row>
             {communeCenter?.map((center) => (
