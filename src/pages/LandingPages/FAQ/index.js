@@ -88,7 +88,7 @@ const Faq = () => {
           }}
         >
           <div>
-            {/*  <MKTypography
+             <MKTypography
               variant="h5"
               color="dark"
               style={{ textAlign: "center" }}
@@ -99,7 +99,7 @@ const Faq = () => {
               Dans cet espace nous donnons des reponses par des sources fiables
               des différents rumeurs et informations reçues
             </MKTypography>
-            <Accordion>
+             {/*<Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -124,6 +124,9 @@ const Faq = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>{faq.precisionInfos}</Typography>
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Typography>Source Ceni</Typography>
                 </AccordionDetails>
                 <AccordionDetails>
                   <Typography>{faq.dateFake}</Typography>
