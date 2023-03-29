@@ -53,6 +53,7 @@ import Actualites from "pages/LandingPages/Actualites";
 import Calendrier from "pages/LandingPages/Calendrier";
 import TextesLegaux from "pages/LandingPages/TexteLegaux";
 import Presentation from "layouts/pages/presentation";
+import Faq from "pages/LandingPages/FAQ";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -168,8 +169,8 @@ const routes = [
   },
   {
     name: "FAQ",
-    icon: <QuestionMarkSharp />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
+    route: "/pages/faq",
+    component: <Faq />,
   },
 ];
 
