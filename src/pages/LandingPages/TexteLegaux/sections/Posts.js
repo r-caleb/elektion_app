@@ -94,7 +94,7 @@ function Places() {
               // description={info.contenu.slice(0, 100)}
               action={{
                 type: "internal",
-                route: "#", 
+                route: `/legaltext/${textes.id}`,  
                 color: "info",
                 // label: "Lire",
               }}

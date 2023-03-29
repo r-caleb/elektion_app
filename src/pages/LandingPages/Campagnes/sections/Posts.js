@@ -49,7 +49,7 @@ function Places() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  console.log(dispositions);
+  // console.log(dispositions);
   const groupObjectByField = (items, field) => {
     const outputs = {};
     items.forEach((item) => {

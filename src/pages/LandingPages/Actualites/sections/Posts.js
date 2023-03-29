@@ -24,15 +24,8 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React components
 import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
-// import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
-
-// Images
-// import post1 from "assets/images/examples/testimonial-6-2.jpg";
-// import post2 from "assets/images/examples/testimonial-6-3.jpg";
-// import post3 from "assets/images/examples/blog-9-4.jpg";
 import { useEffect, useState } from "react";
-// import { info } from "sass"; 
-// import post4 from "assets/images/examples/blog2.jpg"; 
+
 
 function Places() {
   const [infos, setInfo] = useState([]);
@@ -63,7 +56,7 @@ function Places() {
           </MKTypography>
         </Grid>
         <Grid container spacing={3}>
-          {infos.map((info) => (
+          {infos?.map((info) => (
             <Grid item xs={12} sm={6} lg={3} key={info.id} >
             <TransparentBlogCard 
               image= {`http://elektion.de-vie.com/web/assets/images/ImageArticle/${info?.image}`}
@@ -71,7 +64,7 @@ function Places() {
               description={info.contenu.slice(0, 100)}
               action={{
                 type: "internal",
-                route: "#", 
+                route: `/news/${info.id}`, 
                 color: "info",
                 label: "Lire",
               }}
@@ -80,46 +73,6 @@ function Places() {
           ))
 
           }
-          
-          {/* <Grid item xs={12} sm={6} lg={3}>
-            <TransparentBlogCard
-              image={post2}
-              title="MateLabs machine learning"
-              description="If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with ..."
-              action={{
-                type: "internal",
-                route: "/pages/blogs/author",
-                color: "info",
-                label: "read more",
-              }}
-            />
-          </Grid> */}
-          {/* <Grid item xs={12} sm={6} lg={3}>
-            <TransparentBlogCard
-              image={post3}
-              title="MateLabs machine learning"
-              description="If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with ..."
-              action={{
-                type: "internal",
-                route: "/pages/blogs/author",
-                color: "info",
-                label: "read more",
-              }}
-            />
-          </Grid> */}
-          {/* <Grid item xs={12} sm={6} lg={3}>
-          <TransparentBlogCard
-              image={post3}
-              title="MateLabs machine learning"
-              description="If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with ..."
-              action={{
-                type: "internal",
-                route: "/pages/blogs/author",
-                color: "info",
-                label: "read more",
-              }}
-            />
-          </Grid> */}
         </Grid>
       </Container>
     </MKBox>

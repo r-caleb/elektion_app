@@ -28,6 +28,21 @@ import footerRoutes from "footer.routes";
 import calendar from "assets/images/calendar.jpg"
 
 const Calendrier = () => {
+  // const [calendar, SetCalendar] = useState([]);
+
+  // const fetchData = () => {
+  //   fetch(`https://de-vie.com/processus_E_api/api/calend`)
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((data) => {
+  //     SetCalendar(data.calend)
+  //   })
+  // }
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />

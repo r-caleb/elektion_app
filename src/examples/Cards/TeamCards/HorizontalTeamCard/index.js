@@ -57,23 +57,23 @@ function HorizontalTeamCard({ image, name, position, description }) {
 }
 
 // Typechecking props for the HorizontalTeamCard
-HorizontalTeamCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  position: PropTypes.shape({
-    color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "light",
-    ]),
-    label: PropTypes.string.isRequired,
-  }).isRequired,
-  description: PropTypes.string.isRequired,
-};
+// HorizontalTeamCard.propTypes = {
+//   image: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   position: PropTypes.shape({
+//     color: PropTypes.oneOf([
+//       "primary",
+//       "secondary",
+//       "info",
+//       "success",
+//       "warning",
+//       "error",
+//       "dark",
+//       "light",
+//     ]),
+//     label: PropTypes.string.isRequired,
+//   }).isRequired,
+//   description: PropTypes.string.isRequired,
+// };
 
 export default HorizontalTeamCard;
