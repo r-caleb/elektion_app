@@ -30,6 +30,7 @@ import "./mapScreen.scss";
 import { Container, Row, Col } from "react-bootstrap";
 // Routes
 import routes from "routes";
+import moment from "moment/min/moment-with-locales";
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
@@ -52,6 +53,7 @@ const Faq = () => {
     fetchData();
   }, []);
   console.log(faq);
+  moment.locale("fr");
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -88,7 +90,7 @@ const Faq = () => {
           }}
         >
           <div>
-             <MKTypography
+            <MKTypography
               variant="h5"
               color="dark"
               style={{ textAlign: "center" }}
@@ -99,7 +101,7 @@ const Faq = () => {
               Dans cet espace nous donnons des reponses par des sources fiables
               des différents rumeurs et informations reçues
             </MKTypography>
-             {/*<Accordion>
+            {/*<Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -129,7 +131,7 @@ const Faq = () => {
                   <Typography>Source Ceni</Typography>
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Typography>{faq.dateFake}</Typography>
+                  <Typography>{moment(faq.dateFake).fromNow()}</Typography>
                 </AccordionDetails>
               </Accordion>
             ))}

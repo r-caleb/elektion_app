@@ -29,6 +29,7 @@ import Candidat from "pages/LandingPages/OneCandidat";
 import Parti from "pages/LandingPages/OneParti";
 import Centre from "pages/LandingPages/OneCentre";
 
+
 // Material Kit 2 React routes
 import routes from "routes";
 
