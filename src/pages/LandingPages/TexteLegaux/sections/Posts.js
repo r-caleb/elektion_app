@@ -26,7 +26,7 @@ import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 
 // Images
-import justice from "assets/images/justice.png"
+import justice from "assets/images/justice.png";
 // import post1 from "assets/images/examples/testimonial-6-2.jpg";
 // import post2 from "assets/images/examples/testimonial-6-3.jpg";
 // import post3 from "assets/images/examples/blog-9-4.jpg";
@@ -39,18 +39,17 @@ function Places() {
 
   const fetchData = () => {
     fetch(`https://de-vie.com/processus_E_api/api/get_loi_text_legeaux`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      setTextes(data);
-    })
-  }
-  
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setTextes(data);
+      });
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
-  
 
   // console.log(textes);
   const groupObjectByField = (items, field) => {
@@ -64,7 +63,6 @@ function Places() {
       }
     });
     return Object.values(outputs);
-    
   };
 
   const textesLegaux = groupObjectByField(textes, "nom");
@@ -74,35 +72,34 @@ function Places() {
       <Container>
         <Grid container item xs={12} lg={6}>
           <MKTypography variant="h3" mb={6}>
-          TEXTES LÉGAUX ÉLECTORAUX
+            TEXTES LÉGAUX ÉLECTORAUX
           </MKTypography>
         </Grid>
         <Grid container spacing={3}>
           {textesLegaux &&
-          textesLegaux
-            .filter((value) =>
-              input
-                ? value.nom.toLowerCase().includes(input.toLowerCase())
-                : true
-            )
-            .map((text) => (
-            <Grid item xs={12} sm={6} lg={3} key={text.id} >
-              <h5>Textes Légaux</h5>
-            <TransparentBlogCard 
-              image={justice}
-              title={text.nom}
-              // description={info.contenu.slice(0, 100)}
-              action={{
-                type: "internal",
-                route: `/legaltext/${text.nom}`,  
-                color: "info",
-                // label: "Lire",
-              }}
-            />
-          </Grid>
-          ))
-          }
-          
+            textesLegaux
+              .filter((value) =>
+                input
+                  ? value.nom.toLowerCase().includes(input.toLowerCase())
+                  : true
+              )
+              .map((text) => (
+                <Grid item xs={12} sm={6} lg={3} key={text.id}>
+                  <h5>Textes Légaux</h5>
+                  <TransparentBlogCard
+                    image={justice}
+                    title={text.nom}
+                    // description={info.contenu.slice(0, 100)}
+                    action={{
+                      type: "internal",
+                      route: `/legaltext/${text.nom}`,
+                      color: "info",
+                      // label: "Lire",
+                    }}
+                  />
+                </Grid>
+              ))}
+
           {/* <Grid item xs={12} sm={6} lg={3}>
             <BackgroundBlogCard
               image={post4}
