@@ -14,7 +14,8 @@ Coded by www.creative-tim.com
 */
 
 import { useEffect } from "react";
-
+// import OnePoste from "pages/LandingPages/Actualites/sections/OnePoste";
+// import OnePoste from "pages/LandingPages/OneActualite/sections/OnePoste";
 // react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
@@ -32,6 +33,9 @@ import Centre from "pages/LandingPages/OneCentre";
 
 // Material Kit 2 React routes
 import routes from "routes";
+import OneActualite from "pages/LandingPages/OneActualite";
+import OneTexte from "pages/LandingPages/OneTexte";
+import OneCampagne from "pages/LandingPages/OneCampagne";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -72,6 +76,10 @@ export default function App() {
         <Route exact path="/pages/parti/:nom" element={<Parti />} />
         <Route exact path="/pages/centre/:province" element={<Centre />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
+        <Route path="/news/:id" element={<OneActualite />} />
+        <Route path="/legaltext/:nom" element={<OneTexte />} />  
+        <Route path="/campaign/:id" element={<OneCampagne />} />
+
       </Routes>
     </ThemeProvider>
   );

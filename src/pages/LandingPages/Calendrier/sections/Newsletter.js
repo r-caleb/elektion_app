@@ -33,18 +33,17 @@ function Newsletter() {
       <Container>
         <Grid container alignItems="center">
           <Grid item sx={12} md={6} sx={{ ml: { xs: 0, lg: 3 }, mb: { xs: 12, md: 0 } }}>
-            <MKTypography variant="h4">Be the first to see the news</MKTypography>
+            <MKTypography variant="h4">News Calendrier Electoral RDC</MKTypography>
             <MKTypography variant="body2" color="text" mb={3}>
-              Your company may not be in the software business, but eventually, a software company
-              will be in your business.
+              Soyez le premier a recevoir les informations sur tout ajustation ou modification du calendrier electoral de la RDC dans votre adresse mail
             </MKTypography>
             <Grid container spacing={1}>
               <Grid item xs={8}>
-                <MKInput type="email" label="Email Here..." fullWidth />
+                <MKInput type="email" label="Votre Email..." fullWidth />
               </Grid>
               <Grid item xs={4}>
                 <MKButton variant="gradient" color="info" sx={{ height: "100%" }}>
-                  Subscribe
+                  Souscrire
                 </MKButton>
               </Grid>
             </Grid>

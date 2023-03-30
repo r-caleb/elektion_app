@@ -10,16 +10,19 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import Profile from "pages/LandingPages/Author/sections/Profile";
-import Posts from "pages/LandingPages/Author/sections/Posts";
-import Contact from "pages/LandingPages/Author/sections/Contact";
-import Footer from "pages/LandingPages/Author/sections/Footer";
+// import Profile from "pages/LandingPages/Author/sections/Profile";
+import Posts from "pages/LandingPages/TexteLegaux/sections/Posts";
+// import Contact from "pages/LandingPages/Author/sections/Contact";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+
+// import Footer from "pages/LandingPages/Author/sections/Footer";
 
 // Routes
 import routes from "routes";
+import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/city-profile.jpg";
+import bgImage from "assets/images/legaltext.jpg";
 
 const TextesLegaux = () => {
   return (
@@ -56,11 +59,11 @@ const TextesLegaux = () => {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-          <Profile />
+          {/* <Profile /> */}
           <Posts />
         </Card>
-        <Contact />
-        <Footer />
+        
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

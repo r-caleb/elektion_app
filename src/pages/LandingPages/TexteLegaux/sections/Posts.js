@@ -26,61 +26,84 @@ import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 
 // Images
-import post1 from "assets/images/examples/testimonial-6-2.jpg";
-import post2 from "assets/images/examples/testimonial-6-3.jpg";
-import post3 from "assets/images/examples/blog-9-4.jpg";
-import post4 from "assets/images/examples/blog2.jpg";
+import justice from "assets/images/justice.png"
+// import post1 from "assets/images/examples/testimonial-6-2.jpg";
+// import post2 from "assets/images/examples/testimonial-6-3.jpg";
+// import post3 from "assets/images/examples/blog-9-4.jpg";
+// import post4 from "assets/images/examples/blog2.jpg";
+import { useEffect, useState } from "react";
 
 function Places() {
+  const [textes, setTextes] = useState([]);
+  const [input, setInput] = useState("");
+
+  const fetchData = () => {
+    fetch(`https://de-vie.com/processus_E_api/api/get_loi_text_legeaux`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      setTextes(data);
+    })
+  }
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
+
+  // console.log(textes);
+  const groupObjectByField = (items, field) => {
+    const outputs = {};
+    // console.log(outputs);
+    items.forEach((item) => {
+      if (outputs.hasOwnProperty(item[field])) {
+        outputs[item[field]].values.push(item);
+      } else {
+        outputs[item[field]] = { nom: item[field], values: [item] };
+      }
+    });
+    return Object.values(outputs);
+    
+  };
+
+  const textesLegaux = groupObjectByField(textes, "nom");
+
   return (
     <MKBox component="section" py={2}>
       <Container>
         <Grid container item xs={12} lg={6}>
           <MKTypography variant="h3" mb={6}>
-            Check my latest blogposts
+          TEXTES LÉGAUX ÉLECTORAUX
           </MKTypography>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} lg={3}>
-            <TransparentBlogCard
-              image={post1}
-              title="Rover raised $65 million"
-              description="Finding temporary housing for your dog should be as easy as renting an Airbnb. That’s the idea behind Rover ..."
+          {textesLegaux &&
+          textesLegaux
+            .filter((value) =>
+              input
+                ? value.nom.toLowerCase().includes(input.toLowerCase())
+                : true
+            )
+            .map((text) => (
+            <Grid item xs={12} sm={6} lg={3} key={text.id} >
+              <h5>Textes Légaux</h5>
+            <TransparentBlogCard 
+              image={justice}
+              title={text.nom}
+              // description={info.contenu.slice(0, 100)}
               action={{
                 type: "internal",
-                route: "/pages/blogs/author",
+                route: `/legaltext/${text.nom}`,  
                 color: "info",
-                label: "read more",
+                // label: "Lire",
               }}
             />
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <TransparentBlogCard
-              image={post2}
-              title="MateLabs machine learning"
-              description="If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with ..."
-              action={{
-                type: "internal",
-                route: "/pages/blogs/author",
-                color: "info",
-                label: "read more",
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <TransparentBlogCard
-              image={post3}
-              title="MateLabs machine learning"
-              description="If you’ve ever wanted to train a machine learning model and integrate it with IFTTT, you now can with ..."
-              action={{
-                type: "internal",
-                route: "/pages/blogs/author",
-                color: "info",
-                label: "read more",
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          ))
+          }
+          
+          {/* <Grid item xs={12} sm={6} lg={3}>
             <BackgroundBlogCard
               image={post4}
               title="Flexible work hours"
@@ -91,7 +114,7 @@ function Places() {
                 label: "read more",
               }}
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </MKBox>

@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 // @mui material components
@@ -13,23 +11,24 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
 // import Profile from "pages/LandingPages/Author/sections/Profile";
-import Posts from "pages/LandingPages/Actualites/sections/Posts";
-import Contact from "pages/LandingPages/Author/sections/Contact";
-// import Footer from "pages/LandingPages/Author/sections/Footer";
+import Posts from "pages/LandingPages/TexteLegaux/sections/Posts";
+// import Contact from "pages/LandingPages/Author/sections/Contact";
 import DefaultFooter from "examples/Footers/DefaultFooter";
+
+// import Footer from "pages/LandingPages/Author/sections/Footer";
 
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
-
 // Images
-import bgImage from "assets/images/city-profile.jpg";
+import bgImage from "assets/images/legaltext.jpg";
+import Textes from "./sections/Textes";
 
-const Actualites = () => {
+const OneTexte = () => {
   return (
     <>
-      <DefaultNavbar routes={routes} transparent light/>
+      <DefaultNavbar routes={routes} transparent light />
       <MKBox bgColor="white">
         <MKBox
           minHeight="25rem"
@@ -62,14 +61,13 @@ const Actualites = () => {
           }}
         >
           {/* <Profile /> */}
-          <Posts />
+          <Textes />
         </Card>
-        <Contact />
+        
         <DefaultFooter content={footerRoutes} />
-
       </MKBox>
     </>
   );
 };
 
-export default Actualites;
+export default OneTexte;
