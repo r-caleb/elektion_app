@@ -86,7 +86,7 @@ const Candidat = () => {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}`,
+              )},url(${bgimage})`,
             backgroundColor: "white",
             backgroundSize: "cover",
             backgroundPosition: "center",

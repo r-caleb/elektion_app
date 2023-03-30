@@ -19,6 +19,7 @@ import Posts from "./sections/Posts";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Team from "./sections/Team";
+import calendar from "assets/images/calendar.jpg";
 
 const Parti = () => {
   const [parti, setParti] = useState([]);
@@ -56,7 +57,7 @@ const Parti = () => {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}`,
+              )},url(${calendar})`,
             backgroundColor: "white",
             backgroundSize: "cover",
             backgroundPosition: "center",
