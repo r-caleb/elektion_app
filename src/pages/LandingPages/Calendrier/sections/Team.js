@@ -35,7 +35,6 @@ import team1 from "assets/images/team-5.jpg";
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-
 const StyledPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -44,22 +43,22 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.primary,
 }));
 
-  const Team = () => {
-    const [input, setInput] = useState("");
-    const [calendar, setCalendar] = useState();
-    const handleSubmit = (e) => {
-      e.preventDefault();
-    };
-    useEffect(() => {
-      fetch(`https://de-vie.com/processus_E_api/api/calend`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          setCalendar(data.calend);
-        });
-    }, []);
-    moment.locale("fr");
+const Team = () => {
+  const [input, setInput] = useState("");
+  const [calendar, setCalendar] = useState();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  useEffect(() => {
+    fetch(`https://de-vie.com/processus_E_api/api/calend`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCalendar(data.calend);
+      });
+  }, []);
+  moment.locale("fr");
 
   return (
     <MKBox
@@ -75,10 +74,12 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-            Calendrier électoral 2022-2024
+              Calendrier électoral 2022-2024
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
-            Le calendrier électoral liste les élections aux fonctions politiques dans les différentes entités territoriales où elles sont organisées.
+              Le calendrier électoral liste les élections aux fonctions
+              politiques dans les différentes entités territoriales où elles
+              sont organisées.
             </MKTypography>
           </Grid>
         </Grid>
@@ -92,41 +93,43 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
             </MKBox> */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        {calendar?.map((calend) => (
-          <StyledPaper
-            sx={{
-              my: 1,
-              p: 2,
-            }}
-            key={calend.id}
-          >
-            <Grid container wrap="nowrap" spacing={2}>
-              <Grid item>
-                <Typography variant="h1" className="date">
-                  {moment(calend.date).format("Do MMMM YYYY")}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography className="py-1" variant="h1">
-                  Evénement
-                </Typography>
-                <Typography className="py-1">{calend.titre}</Typography>
-              </Grid>
-            </Grid>
-          </StyledPaper>
-        ))}
-      </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <StyledPaper
+                sx={{
+                  my: 1,
+                  p: 2,
+                }}
+              >
+                <Grid container wrap="nowrap" spacing={2}>
+                  <Grid item>
+                    <Typography variant="h1" className="date">
+                      23 Juin 2023
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography className="py-1" variant="h1">
+                      Evénement
+                    </Typography>
+                    <Typography className="py-1">
+                      Identification et enrôlement des électeurs dans les
+                      provinces de l'AO1 (Kongo-central, Kinshasa, Kwango,
+                      Kwilu, Mai-ndombe, Equateur, Mongala, Nord-Ubangi,
+                      Sud-Ubangi et Tshuapa)
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </StyledPaper>
+            </Box>
           </Grid>
         </Grid>
       </Container>
     </MKBox>
   );
-}
+};
 
 export default Team;
