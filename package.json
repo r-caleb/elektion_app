@@ -1,82 +1,4 @@
-<<<<<<< HEAD
-{
-  "name": "elektion_app",
-  "version": "1.0.0",
-  "private": true,
-  "author": "Elektion APP",
-  "license": "",
-  "description": "React App for giving election's news",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "engines": {
-    "node": "16",
-    "npm": ">=6"
-  },
-  "dependencies": {
-    "@emotion/cache": "11.4.0",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "5.2.0",
-    "@mui/material": "^5.2.0",
-    "@mui/styled-engine": "5.2.0",
-    "@react-google-maps/api": "^2.17.0",
-    "@testing-library/jest-dom": "5.11.4",
-    "@testing-library/react": "11.1.0",
-    "@testing-library/user-event": "12.1.10",
-    "chroma-js": "2.1.2",
-    "flatpickr": "4.6.9",
-    "mdb-react-ui-kit": "^5.1.0",
-    "mdb-ui-kit": "^6.2.0",
-    "moment": "^2.29.4",
-    "prop-types": "15.7.2",
-    "react": "17.0.2",
-    "react-bootstrap": "^2.7.2",
-    "react-copy-to-clipboard": "5.0.4",
-    "react-countup": "6.1.0",
-    "react-dom": "17.0.2",
-    "react-dotenv": "^0.1.3",
-    "react-flatpickr": "3.10.7",
-    "react-icons": "^4.6.0",
-    "react-moment": "^1.1.3",
-    "react-router-dom": "6.0.2",
-    "react-scripts": "4.0.3",
-    "react-syntax-highlighter": "15.4.5",
-    "svgo": "^3.0.2",
-    "web-vitals": "1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "dotenv": "^16.0.3",
-    "sass": "^1.55.0"
-  }
-}
-=======
+<<<<<<<<< Temporary merge branch 1
 {
   "name": "elektion_app",
   "version": "1.0.0",
@@ -154,4 +76,85 @@
     "node": "16.19.1"
   }
 }
->>>>>>> develop_herman
+=========
+{
+  "name": "elektion_app",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Elektion APP",
+  "license": "",
+  "description": "React App for giving election's news",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "16",
+    "npm": ">=6"
+  },
+  "dependencies": {
+    "@emotion/cache": "11.4.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "5.2.0",
+    "@mui/material": "^5.2.0",
+    "@mui/styled-engine": "5.2.0",
+    "@react-google-maps/api": "^2.17.0",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.1.0",
+    "@testing-library/user-event": "12.1.10",
+    "chroma-js": "2.1.2",
+    "flatpickr": "4.6.9",
+    "mdb-react-ui-kit": "^5.1.0",
+    "mdb-ui-kit": "^6.2.0",
+    "moment": "^2.29.4",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-bootstrap": "^2.7.2",
+    "react-copy-to-clipboard": "5.0.4",
+    "react-countup": "6.1.0",
+    "react-dom": "17.0.2",
+    "react-dotenv": "^0.1.3",
+    "react-flatpickr": "3.10.7",
+    "react-icons": "^4.6.0",
+    "react-moment": "^1.1.3",
+    "react-router-dom": "6.0.2",
+    "react-scripts": "4.0.3",
+    "react-syntax-highlighter": "15.4.5",
+    "svgo": "^3.0.2",
+    "web-vitals": "1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "sass": "^1.55.0"
+  },
+  "volta": {
+    "node": "16.19.1"
+  }
+}
+>>>>>>>>> Temporary merge branch 2
