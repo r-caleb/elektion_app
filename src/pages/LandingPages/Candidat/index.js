@@ -123,8 +123,7 @@ const Candidat = () => {
               </form>
             </div>
           </Row>
-          <hr />
-          <Container sx={{ mt: 4 }}>
+          <Container sx={{ mt: 0 }}>
             <MKTypography
               variant="h4"
               color="blue"
@@ -134,6 +133,8 @@ const Candidat = () => {
               Cet espace vous présente tous les candidats
             </MKTypography>
           </Container>
+          <hr />
+
           <Team
             keywords={keywords}
             candidates={candidates}

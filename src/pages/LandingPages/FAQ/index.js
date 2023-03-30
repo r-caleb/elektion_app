@@ -31,7 +31,8 @@ import { Container, Row, Col } from "react-bootstrap";
 // Routes
 import routes from "routes";
 import moment from "moment/min/moment-with-locales";
-
+import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/city-profile.jpg";
 import Team from "./sections/Team";
@@ -56,7 +57,7 @@ const Faq = () => {
   moment.locale("fr");
   return (
     <>
-     <DefaultNavbar routes={routes} sticky />
+      <DefaultNavbar routes={routes} sticky />
       <MKBox bgColor="white">
         <MKBox
           minHeight="15rem"
@@ -122,7 +123,18 @@ const Faq = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography>{faq.fakeinfos}</Typography>
+                  <Typography>
+                    <Container sx={{ mt: 4 }}>
+                      <MKTypography
+                        variant="h4"
+                        color="blue"
+                        textAlign="left"
+                        px={{ xs: 6, lg: 12 }}
+                      >
+                        {faq.fakeinfos}
+                      </MKTypography>
+                    </Container>
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>{faq.precisionInfos}</Typography>

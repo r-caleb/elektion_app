@@ -30,7 +30,6 @@ import Candidat from "pages/LandingPages/OneCandidat";
 import Parti from "pages/LandingPages/OneParti";
 import Centre from "pages/LandingPages/OneCentre";
 
-
 // Material Kit 2 React routes
 import routes from "routes";
 import OneActualite from "pages/LandingPages/OneActualite";
@@ -77,9 +76,8 @@ export default function App() {
         <Route exact path="/pages/centre/:province" element={<Centre />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
         <Route path="/news/:id" element={<OneActualite />} />
-        <Route path="/legaltext/:nom" element={<OneTexte />} />  
+        <Route path="/legaltext/:nom" element={<OneTexte />} />
         <Route path="/campaign/:id" element={<OneCampagne />} />
-
       </Routes>
     </ThemeProvider>
   );

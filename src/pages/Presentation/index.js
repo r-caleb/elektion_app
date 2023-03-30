@@ -14,18 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
+import Container from "@mui/material/Container";
 import MKTypography from "components/MKTypography";
 import MKSocialButton from "components/MKSocialButton";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
@@ -42,7 +43,6 @@ import RecentInfo from "pages/Presentation/components/RecentInfo";
 // Routes
 import routes from "routes";
 
-import footerRoutes from "footer.routes";
 
 // Images
 import echangeur from "assets/images/bg.jpg";
