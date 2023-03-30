@@ -12,7 +12,13 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import "../calendar.scss";
+import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+// import { AiOutlineSearch } from "react-icons/ai";
+import moment from "moment/min/moment-with-locales";
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -26,9 +32,35 @@ import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
 import team1 from "assets/images/team-5.jpg";
+import { Box, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 
-function Team() {
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  width: 950,
+  color: theme.palette.text.primary,
+}));
+
+  const Team = () => {
+    const [input, setInput] = useState("");
+    const [calendar, setCalendar] = useState();
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    };
+    useEffect(() => {
+      fetch(`https://de-vie.com/processus_E_api/api/calend`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setCalendar(data.calend);
+        });
+    }, []);
+    moment.locale("fr");
+
   return (
     <MKBox
       component="section"
@@ -52,14 +84,44 @@ function Team() {
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
+            {/* <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team1}
                 name="Emma Roberts"
                 position={{ color: "info", label: "UI Designer" }}
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
-            </MKBox>
+            </MKBox> */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {calendar?.map((calend) => (
+          <StyledPaper
+            sx={{
+              my: 1,
+              p: 2,
+            }}
+            key={calend.id}
+          >
+            <Grid container wrap="nowrap" spacing={2}>
+              <Grid item>
+                <Typography variant="h1" className="date">
+                  {moment(calend.date).format("Do MMMM YYYY")}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className="py-1" variant="h1">
+                  Evénement
+                </Typography>
+                <Typography className="py-1">{calend.titre}</Typography>
+              </Grid>
+            </Grid>
+          </StyledPaper>
+        ))}
+      </Box>
           </Grid>
         </Grid>
       </Container>

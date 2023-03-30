@@ -31,6 +31,7 @@ import Presentation from "layouts/pages/presentation";
 import routes from "routes";
 import OneActualite from "pages/LandingPages/OneActualite";
 import OneTexte from "pages/LandingPages/OneTexte";
+import OneCampagne from "pages/LandingPages/OneCampagne";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -62,7 +63,8 @@ export default function App() {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
         <Route path="/news/:id" element={<OneActualite />} />
-        <Route path="/legaltext/:id" element={<OneTexte />} /> 
+        <Route path="/legaltext/:nom" element={<OneTexte />} />  
+        <Route path="/campaign/:id" element={<OneCampagne />} />
 
       </Routes>
     </ThemeProvider>

@@ -83,12 +83,12 @@ function Places() {
             .map((info) => (
           <Grid item xs={12} sm={6} lg={3} key={dispositions.id}>
             <TransparentBlogCard
-              image={`http://elektion.de-vie.com/web/assets/images/ImageArticle/${info?.image}`}
+              image={`https://elektion.de-vie.com/web/assets/images/ImageArticle/${info?.image}`}
               title={info.titre}
               // description=
               action={{
                 type: "internal",
-                route: "#",
+                route:`/campaign/${info.id}`,
                 color: "info",
                 // label: "read more",
               }}
