@@ -43,6 +43,7 @@ import RecentInfo from "pages/Presentation/components/RecentInfo";
 // Routes
 import routes from "routes";
 
+import calendar from "assets/images/calendar.jpg"
 
 // Images
 import echangeur from "assets/images/bg.jpg";
@@ -73,7 +74,7 @@ function Presentation() {
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${echangeur})`,
+          backgroundImage: `url(${calendar})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -88,7 +89,7 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
-            ></MKTypography>
+            >Ensemble rétablissons la confiance aux électeurs.</MKTypography>
           </Grid>
         </Container>
       </MKBox>

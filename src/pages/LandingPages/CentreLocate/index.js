@@ -25,8 +25,8 @@ import Footer from "./sections/Footer";
 import "./mapScreen.scss";
 import { Container, Row, Col } from "react-bootstrap";
 // Routes
-  import DefaultFooter from "examples/Footers/DefaultFooter";
-  import footerRoutes from "footer.routes";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/city-profile.jpg";
 import Team from "./sections/Team";
@@ -104,7 +104,7 @@ const CentreLocate = () => {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}`,
+              )},url(${bgImage})`,
             backgroundColor: "white",
             backgroundSize: "cover",
             backgroundPosition: "center",
