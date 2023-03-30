@@ -94,7 +94,7 @@ export default [
       {
         image: fact,
         name: "Fact checking, cet espace vous fournit les réponses exactes aux différents rumeurs",
-        route: "/sections/attention-catchers/alerts",
+        route: "/pages/faq",
       },
     ],
   },

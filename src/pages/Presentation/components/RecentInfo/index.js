@@ -70,7 +70,7 @@ function RecentInfo({ recent }) {
           />
           <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href="/presentation"
             target="_blank"
             rel="noreferrer"
             variant="body2"

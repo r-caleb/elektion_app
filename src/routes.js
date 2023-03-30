@@ -43,17 +43,17 @@ import Icon from "@mui/material/Icon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 // Pages
-import AboutUs from "layouts/pages/landing-pages/about-us";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
-import Author from "layouts/pages/landing-pages/author";
-import SignIn from "layouts/pages/authentication/sign-in";
+
 import Candidat from "pages/LandingPages/Candidat";
+import Centre from "pages/LandingPages/Centre";
+import CentreLocate from "pages/LandingPages/CentreLocate";
 import Parti from "pages/LandingPages/Parti";
 import Campagne from "pages/LandingPages/Campagnes";
 import Actualites from "pages/LandingPages/Actualites";
 import Calendrier from "pages/LandingPages/Calendrier";
 import TextesLegaux from "pages/LandingPages/TexteLegaux";
 import Presentation from "layouts/pages/presentation";
+import Faq from "pages/LandingPages/FAQ";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -123,12 +123,12 @@ const routes = [
           {
             name: "Centre Inscription & vote",
             route: "/pages/center",
-            component: <Candidat />,
+            component: <Centre />,
           },
           {
             name: "Localisation",
             route: "/pages/map",
-            component: <Parti />,
+            component: <CentreLocate />,
           },
         ],
       },
@@ -169,8 +169,8 @@ const routes = [
   },
   {
     name: "FAQ",
-    icon: <QuestionMarkSharp />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
+    route: "/pages/faq",
+    component: <Faq />,
   },
 ];
 

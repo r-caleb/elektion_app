@@ -77,7 +77,6 @@ function DefaultFooter({ content }) {
                       <MKTypography
                         component="a"
                         href={href}
-                        target="_blank"
                         rel="noreferrer"
                         variant="button"
                         fontWeight="regular"
