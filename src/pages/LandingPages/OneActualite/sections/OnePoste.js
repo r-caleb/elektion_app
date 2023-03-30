@@ -3,7 +3,6 @@ import routes from "routes";
 import Container from "@mui/material/Container";
 // import Grid from "@mui/material/Grid";
 
-
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -50,45 +49,47 @@ const OnePoste = () => {
   // moment.locale("fr");
 
   return (
-   
     <MKBox component="section" py={2}>
-    
-       <Container className="news">
-       <h4 className="title">Actualités</h4>
+      <Container className="news">
+        <h4 className="title">Actualités</h4>
         <hr />
-       <Row>
-        <Col>
-          <div className="news__read">
-          <h2>{news[0]?.titre}</h2>
-            <hr />
-            <p>{news[0]?.date}</p>
-             <img
-              src={`http://elektion.de-vie.com/web/assets/images/ImageArticle/${news[0]?.image}`}
-              alt="info_image"
-            />
-            <br />
-            <br />
-            <p dangerouslySetInnerHTML={{ __html: news[0]?.contenu }} />
-          </div>
-          <div className="social_link">
-            <p>Partager sur :</p>
-            <div>
-              <FacebookShareButton url={url}>
-                <FacebookIcon size={32} round logoFillColor="white" />
-              </FacebookShareButton>
-              <FacebookMessengerShareButton url={url}>
-                <FacebookMessengerIcon size={32} round logoFillColor="white" />
-              </FacebookMessengerShareButton>
-              <WhatsappShareButton title="visitez cet article" url={url}>
-                <WhatsappIcon size={32} round logoFillColor="white" />
-              </WhatsappShareButton>
-              <TwitterShareButton url={url}>
-                <TwitterIcon size={32} round logoFillColor="white" />
-              </TwitterShareButton>
+        <Row>
+          <Col>
+            <div className="news__read">
+              <h2>{news[0]?.titre}</h2>
+              <hr />
+              <p>{news[0]?.date}</p>
+              <img
+                src={`http://elektion.de-vie.com/web/assets/images/ImageArticle/${news[0]?.image}`}
+                alt="info_image"
+              />
+              <br />
+              <br />
+              <p dangerouslySetInnerHTML={{ __html: news[0]?.contenu }} />
             </div>
-          </div>
-        </Col>
-        <Col lg={3} md={4} className="g-4">
+            <div className="social_link">
+              <p>Partager sur :</p>
+              <div>
+                <FacebookShareButton url={url}>
+                  <FacebookIcon size={32} round logoFillColor="white" />
+                </FacebookShareButton>
+                <FacebookMessengerShareButton url={url}>
+                  <FacebookMessengerIcon
+                    size={32}
+                    round
+                    logoFillColor="white"
+                  />
+                </FacebookMessengerShareButton>
+                <WhatsappShareButton title="visitez cet article" url={url}>
+                  <WhatsappIcon size={32} round logoFillColor="white" />
+                </WhatsappShareButton>
+                <TwitterShareButton url={url}>
+                  <TwitterIcon size={32} round logoFillColor="white" />
+                </TwitterShareButton>
+              </div>
+            </div>
+          </Col>
+          {/* <Col lg={3} md={4} className="g-4">
           {infos.map((info) => (
             <Link to={`/infos/${info.id}`} key={info.id}>
               <Col>
@@ -111,12 +112,10 @@ const OnePoste = () => {
               </Col>
             </Link>
           ))}
-        </Col>
-      </Row>
-    </Container>     
-      
+        </Col> */}
+        </Row>
+      </Container>
     </MKBox>
-    
   );
 };
 

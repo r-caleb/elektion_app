@@ -49,7 +49,7 @@ function Profile() {
                 mb={1}
               >
                 <MKTypography variant="h1">
-                  HERMAN TIKA KINDOKI KO OOOOO
+                 
                 </MKTypography>
                 <MKButton variant="outlined" color="info" size="small">
                   Follow
