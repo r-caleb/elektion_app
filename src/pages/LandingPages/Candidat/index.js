@@ -40,6 +40,7 @@ import footerRoutes from "footer.routes";
 import MKTypography from "components/MKTypography";
 
 import Team from "./sections/Team";
+import calendar from "assets/images/calendar.jpg"
 
 import { Col, Row } from "react-bootstrap";
 const Candidat = () => {
@@ -86,7 +87,7 @@ const Candidat = () => {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )},url(${bgimage})`,
+              )},url(${calendar})`,
             backgroundColor: "white",
             backgroundSize: "cover",
             backgroundPosition: "center",
