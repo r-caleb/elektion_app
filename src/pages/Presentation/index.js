@@ -88,9 +88,7 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
-            >
-              Ensemble, rétablissons la confiance aux électeurs
-            </MKTypography>
+            ></MKTypography>
           </Grid>
         </Container>
       </MKBox>

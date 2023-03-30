@@ -30,7 +30,7 @@ import OnePoste from "./sections/OnePoste";
 const OneActualite = () => {
   return (
     <>
-      <DefaultNavbar routes={routes} transparent light/>
+      <DefaultNavbar routes={routes} sticky />
       <MKBox bgColor="white">
         <MKBox
           minHeight="25rem"
