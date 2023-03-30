@@ -13,8 +13,8 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
 // import Profile from "pages/LandingPages/Author/sections/Profile";
-import Posts from "pages/LandingPages/Actualites/sections/Posts";
-import Contact from "pages/LandingPages/Author/sections/Contact";
+// import Posts from "pages/LandingPages/Actualites/sections/Posts";
+// import Contact from "pages/LandingPages/Author/sections/Contact";
 // import Footer from "pages/LandingPages/Author/sections/Footer";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
@@ -25,8 +25,9 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
-
-const Actualites = () => {
+// import OnePoste from "../Actualites/sections/OnePoste";
+import OnePoste from "./sections/OnePoste";
+const OneActualite = () => {
   return (
     <>
       <DefaultNavbar routes={routes} transparent light/>
@@ -62,9 +63,9 @@ const Actualites = () => {
           }}
         >
           {/* <Profile /> */}
-          <Posts />
+          <OnePoste />
         </Card>
-        <Contact />
+        {/* <Contact /> */}
         <DefaultFooter content={footerRoutes} />
 
       </MKBox>
@@ -72,4 +73,4 @@ const Actualites = () => {
   );
 };
 
-export default Actualites;
+export default OneActualite;

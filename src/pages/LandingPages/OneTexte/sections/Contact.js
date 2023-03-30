@@ -67,10 +67,10 @@ function Contact() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                       Information de Contact
+                      Contact Information
                     </MKTypography>
                     <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                    Remplissez le formulaire et notre équipe vous répondra dans les heures qui suivent.
+                      Fill up the form and our Team will get back to you within 24 hours.
                     </MKTypography>
                     <MKBox display="flex" p={1}>
                       <MKTypography variant="button" color="white">
@@ -84,7 +84,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        (+243) 772 100 200
+                        (+40) 772 100 200
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -99,7 +99,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                        contact@elektion-app.com
+                        hello@creative-tim.com
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" color="white" p={1}>
@@ -114,7 +114,7 @@ function Contact() {
                         ml={2}
                         fontWeight="regular"
                       >
-                       Kinshasa,(RDC) Gombe, RO 010458
+                        Dyonisie Wolf Bucharest, RO 010458
                       </MKTypography>
                     </MKBox>
                     <MKBox mt={3}>
@@ -124,12 +124,12 @@ function Contact() {
                       <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-twitter" style={{ fontSize: "1.25rem" }} />
                       </MKButton>
-                      {/* <MKButton variant="text" color="white" size="large" iconOnly>
+                      <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-dribbble" style={{ fontSize: "1.25rem" }} />
                       </MKButton>
                       <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-instagram" style={{ fontSize: "1.25rem" }} />
-                      </MKButton> */}
+                      </MKButton>
                     </MKBox>
                   </MKBox>
                 </MKBox>
@@ -138,10 +138,10 @@ function Contact() {
                 <MKBox component="form" p={2} method="post">
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
                     <MKTypography variant="h2" mb={1}>
-                      Mbote!
+                      Say Hi!
                     </MKTypography>
                     <MKTypography variant="body1" color="text" mb={2}>
-                      Avez-vous une Information a nous faire parvenir, merci de vous senti alise en nous laissant un message. 
+                      We&apos;d like to talk with you.
                     </MKTypography>
                   </MKBox>
                   <MKBox pt={0.5} pb={3} px={3}>
@@ -149,8 +149,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Votre Nom"
-                          placeholder=""
+                          label="My name is"
+                          placeholder="Full Name"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -158,8 +158,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Votre sujet"
-                          placeholder=""
+                          label="I'm looking for"
+                          placeholder="What you love"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -167,8 +167,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Votre message"
-                          placeholder=""
+                          label="Your message"
+                          placeholder="I want to say that..."
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                           multiline
@@ -186,7 +186,7 @@ function Contact() {
                       ml="auto"
                     >
                       <MKButton variant="gradient" color="info">
-                        Envoyer Message
+                        Send Message
                       </MKButton>
                     </Grid>
                   </MKBox>

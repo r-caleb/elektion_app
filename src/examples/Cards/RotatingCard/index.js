@@ -50,7 +50,7 @@ function RotatingCard({ children }) {
 
 // Typechecking props for the RotatingCard
 RotatingCard.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node
 };
 
 export default RotatingCard;
