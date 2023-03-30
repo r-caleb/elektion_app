@@ -36,7 +36,7 @@ function DesignBlocks() {
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
         <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
-          <MKTypography variant="h4" fontWeight="bold" mb={1}>
+          <MKTypography variant="h4" fontWeight="bold" mb={1} color="blue">
             {title}
           </MKTypography>
           <MKTypography

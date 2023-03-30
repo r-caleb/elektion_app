@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import { AiOutlineSearch } from "react-icons/ai";
-
+import footerRoutes from "footer.routes";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
@@ -16,8 +16,9 @@ import Contact from "pages/LandingPages/Candidat/sections/Contact";
 import Footer from "pages/LandingPages/Candidat/sections/Footer";
 import "./centerScreen.scss";
 import { Container, Row, Col } from "react-bootstrap";
-// Routes
 import routes from "routes";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+// Routes
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
@@ -133,7 +134,7 @@ const Centre = () => {
                 ))}
           </Container>
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

@@ -17,7 +17,7 @@ import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-
+import routes from "routes";
 // Author page sections
 import Posts from "./sections/Posts";
 import Contact from "./sections/Contact";
@@ -25,8 +25,8 @@ import Footer from "./sections/Footer";
 import "./mapScreen.scss";
 import { Container, Row, Col } from "react-bootstrap";
 // Routes
-import routes from "routes";
-
+  import DefaultFooter from "examples/Footers/DefaultFooter";
+  import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/city-profile.jpg";
 import Team from "./sections/Team";
@@ -201,7 +201,7 @@ const CentreLocate = () => {
             </div>
           </div>
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

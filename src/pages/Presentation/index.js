@@ -41,10 +41,11 @@ import RecentInfo from "pages/Presentation/components/RecentInfo";
 
 // Routes
 import routes from "routes";
+
 import footerRoutes from "footer.routes";
 
 // Images
-import echangeur from "assets/images/kinshasa_lanuit.jpg";
+import echangeur from "assets/images/bg.jpg";
 import { useEffect, useState } from "react";
 
 function Presentation() {
@@ -108,7 +109,7 @@ function Presentation() {
         <Container sx={{ mt: 4 }}>
           <MKTypography
             variant="h4"
-            color="dark"
+            color="blue"
             textAlign="left"
             px={{ xs: 6, lg: 12 }}
           >

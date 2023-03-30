@@ -137,7 +137,7 @@ const Faq = () => {
             ))}
           </div>
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

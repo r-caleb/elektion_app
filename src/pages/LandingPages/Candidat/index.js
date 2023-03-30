@@ -35,7 +35,11 @@ const keywords = [
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
+
 import Team from "./sections/Team";
+
 import { Col, Row } from "react-bootstrap";
 const Candidat = () => {
   const [activeElement, setActiveElement] = useState("Tout");
@@ -68,7 +72,7 @@ const Candidat = () => {
 
   return (
     <>
-      <DefaultNavbar routes={routes} transparent light />
+      <DefaultNavbar routes={routes} sticky />
       <MKBox bgColor="white">
         <MKBox
           minHeight="15rem"
@@ -127,7 +131,7 @@ const Candidat = () => {
             handleClick={handleClick}
           />
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

@@ -9,6 +9,8 @@ import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
 
 // Author page sections
 import Posts from "./sections/Posts";
@@ -77,7 +79,7 @@ const Parti = () => {
             input={input}
           /> 
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );

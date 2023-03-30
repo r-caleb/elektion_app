@@ -10,6 +10,8 @@ import Select from "@mui/material/Select";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
+import DefaultFooter from "examples/Footers/DefaultFooter";
+import footerRoutes from "footer.routes";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -48,7 +50,7 @@ const OneCentre = () => {
   useEffect(() => {
     fetchData();
   }, [input]);
-  const centerProvince = centers.filter(  
+  const centerProvince = centers.filter(
     (center) => center.province === nomProvince
   );
   const provinceCenter = centerProvince.filter((center) =>
@@ -165,7 +167,7 @@ const OneCentre = () => {
             ))}
           </Container>
         </Card>
-        <Footer />
+        <DefaultFooter content={footerRoutes} />
       </MKBox>
     </>
   );
