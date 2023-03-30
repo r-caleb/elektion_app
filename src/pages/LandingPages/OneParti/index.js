@@ -29,6 +29,7 @@ import Footer from "./sections/Footer";
 
 // Routes
 import routes from "routes";
+import calendar from "assets/images/calendar.jpg";
 
 // Images
 import bgImage from "assets/images/city-profile.jpg";
@@ -76,7 +77,7 @@ const OneParti = () => {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${bgImage})`,
+              )}, url(${calendar})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",
