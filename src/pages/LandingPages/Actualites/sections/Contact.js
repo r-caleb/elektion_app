@@ -67,10 +67,16 @@ function Contact() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                       Information de Contact
+                      Information de Contact
                     </MKTypography>
-                    <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                      Remplissez le formulaire et notre équipe vous répondra dans les 24 heures.
+                    <MKTypography
+                      variant="body2"
+                      color="white"
+                      opacity={0.8}
+                      mb={3}
+                    >
+                      Remplissez le formulaire et notre équipe vous répondra
+                      dans les 24 heures.
                     </MKTypography>
                     <MKBox display="flex" p={1}>
                       <MKTypography variant="button" color="white">
@@ -118,11 +124,27 @@ function Contact() {
                       </MKTypography>
                     </MKBox>
                     <MKBox mt={3}>
-                      <MKButton variant="text" color="white" size="large" iconOnly>
-                        <i className="fab fa-facebook" style={{ fontSize: "1.25rem" }} />
+                      <MKButton
+                        variant="text"
+                        color="white"
+                        size="large"
+                        iconOnly
+                      >
+                        <i
+                          className="fab fa-facebook"
+                          style={{ fontSize: "1.25rem" }}
+                        />
                       </MKButton>
-                      <MKButton variant="text" color="white" size="large" iconOnly>
-                        <i className="fab fa-twitter" style={{ fontSize: "1.25rem" }} />
+                      <MKButton
+                        variant="text"
+                        color="white"
+                        size="large"
+                        iconOnly
+                      >
+                        <i
+                          className="fab fa-twitter"
+                          style={{ fontSize: "1.25rem" }}
+                        />
                       </MKButton>
                       {/* <MKButton variant="text" color="white" size="large" iconOnly>
                         <i className="fab fa-dribbble" style={{ fontSize: "1.25rem" }} />
@@ -141,8 +163,8 @@ function Contact() {
                       Mbote!
                     </MKTypography>
                     <MKTypography variant="body1" color="text" mb={2}>
-                    Avez-vous une information utile a nous partager ? 
-Merci de nous le soumettre, Nous aimerions parler avec vous.
+                      Avez-vous une information utile a nous partager ? Merci de
+                      nous le soumettre, Nous aimerions parler avec vous.
                     </MKTypography>
                   </MKBox>
                   <MKBox pt={0.5} pb={3} px={3}>

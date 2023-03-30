@@ -61,7 +61,7 @@ function Places() {
             <TransparentBlogCard 
               image= {`http://elektion.de-vie.com/web/assets/images/ImageArticle/${info?.image}`}
               title={info.titre}
-              description={info.contenu.slice(0, 100)}
+              description=""
               action={{
                 type: "internal",
                 route: `/news/${info.id}`, 
