@@ -37,6 +37,7 @@ const keywords = [
 import bgImage from "assets/images/city-profile.jpg";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
+import MKTypography from "components/MKTypography";
 
 import Team from "./sections/Team";
 
@@ -123,6 +124,16 @@ const Candidat = () => {
             </div>
           </Row>
           <hr />
+          <Container sx={{ mt: 4 }}>
+            <MKTypography
+              variant="h4"
+              color="blue"
+              textAlign="left"
+              px={{ xs: 6, lg: 12 }}
+            >
+              Cet espace vous présente tous les candidats
+            </MKTypography>
+          </Container>
           <Team
             keywords={keywords}
             candidates={candidates}

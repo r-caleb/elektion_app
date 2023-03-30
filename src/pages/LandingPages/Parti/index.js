@@ -11,6 +11,8 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
+import MKTypography from "components/MKTypography";
+import Container from "@mui/material/Container";
 
 // Author page sections
 import Posts from "./sections/Posts";
@@ -41,7 +43,7 @@ const Parti = () => {
   };
   return (
     <>
-     <DefaultNavbar routes={routes} sticky />
+      <DefaultNavbar routes={routes} sticky />
       <MKBox bgColor="white">
         <MKBox
           minHeight="15rem"
@@ -74,10 +76,18 @@ const Parti = () => {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-        <Team
-            parti={parti}
-            input={input}
-          /> 
+          <Container sx={{ mt: 4 }}>
+            <MKTypography
+              variant="h4"
+              color="blue"
+              textAlign="left"
+              px={{ xs: 6, lg: 12 }}
+            >
+              Tous les partis politiques agrées par l'état de la république
+              démocratique du Congo
+            </MKTypography>
+          </Container>
+          <Team parti={parti} input={input} />
         </Card>
         <DefaultFooter content={footerRoutes} />
       </MKBox>

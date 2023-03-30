@@ -42,7 +42,7 @@ function DesignBlocks() {
           <MKTypography
             variant="body2"
             fontWeight="regular"
-            color="secondary"
+            color="dark"
             mb={1}
             pr={2}
           >
